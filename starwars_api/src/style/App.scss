@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Poller+One&display=swap');
+@import 'bootstrap/scss/bootstrap';
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("http://wallpapercave.com/wp/pEeUsp1.jpg");
+}
+
+nav.navbar {
+
+    img.logotype {
+        width: 30%;
+    }
+
+    a.navbar-brand {
+        width: 70%;
+    }
+
+    .navbar-nav {
+        align-items: flex-end;
+        margin-top: 10px;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    .nav-item {
+        list-style: none;
+        font-family: 'Poller One', sans-serif;
+        font-size: small;
+        letter-spacing: 1px;
+        color: #e1cf9d;
+    }
+
+    .nav-item.active {
+        color: #cfb168;
+    }
+}
+
+.startpage-div {
+    display: flex;
+    align-items: center;
+    height: 75vh;
+    position: fixed;
+}
+
+h1.glow {
+    color: white;
+    font-family: 'Poller One', sans-serif;
+    text-align: center;
+    padding: 30px;
+    font-size: 2rem;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #cd0000, 0 0 40px #cd0000, 0 0 50px #cd0000, 0 0 60px #cd0000, 0 0 70px #cd0000;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #cd0000, 0 0 40px #cd0000, 0 0 50px #cd0000, 0 0 60px #cd0000, 0 0 70px #cd0000, 0 0 80px #cd0000;
+    }
+}
+
+.align-items-center {
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+}
+
+div.next,
+div.prev {
+    .btn {
+        background-color: #9b9b9b;
+        border: none;
+    }
+}
+
+.frontpage-img {
+    width: 70%;
+    padding: 30px;
+}
+
+div.page {
+    color: #f1f1f1;
+}
+
+h2.heading {
+    color: #e1cf9d;
+    font-family: 'Poller One', sans-serif;
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+.results {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 1rem;
+
+    .card {
+        margin: 10px;
+        padding: 20px;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+        border: none;
+
+        &:hover {
+            transform: rotate(1deg);
+        }
+
+        h3 {
+            color: #cfb168;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: x-large;
+            padding: 6px;
+            margin: 0;
+        }
+
+        p {
+            color: #000;
+            text-align: center;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: small;
+            line-height: 1.5;
+        }
+
+        .readMore-div {
+            text-align: center;
+            padding-top: 10px;
+
+            button.btn {
+                padding: 10px;
+                text-transform: uppercase;
+                background-color: #e1cf9d;
+                border: none;
+                font-weight: 400;
+
+                a {
+                    color: #2b2b2b;
+                    text-decoration: none;
+                    font-family: 'Helvetica Neue';
+                }
+            }
+        }
+    }
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    color: gold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-found {
+    color: #e1cf9d;
+    text-align: center;
+    padding: 4rem;
+}
+
+.section {
+
+    .notfound-img {
+        position: absolute;
+        width: 50%;
+        z-index: -1;
+        bottom: 0;
+    }
+
+    .goback-btn {
+        text-align: center;
+        padding: 30px;
+    }
+
+    .btn-light {
+        color: #2b2b2b;
+        background: rgb(207, 177, 104);
+        background: linear-gradient(183deg, rgba(207, 177, 104, 1) 6%, rgba(255, 255, 255, 1) 100%);
+
+        border: none;
+
+        &:hover {
+            background: rgb(207, 177, 104);
+            background: linear-gradient(0deg, rgba(207, 177, 104, 1) 6%, rgba(255, 255, 255, 1) 100%);
+        }
+    }
+
+    h2 {
+        color: #e1cf9d;
+        text-align: center;
+        font-family: 'Poller One', sans-serif;
+    }
+
+    .single-info {
+        padding: 20px;
+
+        .info-list {
+            margin: 10px;
+            background-color: white;
+            border-radius: 4px;
+        }
+
+        h2 {
+            color: #474747;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: large;
+            padding: 10px;
+            text-transform: none;
+            margin: 0;
+            padding-top: 15px;
+        }
+
+        hr {
+            margin: 5px;
+        }
+
+        p {
+            color: rgba(33, 37, 41, 0.75);
+            padding: 10px;
+            margin: 0;
+            font-family: 'Helvetica Neue';
+        }
+
+        .hr-color {
+            color: #e1cf9d;
+            height: 2px;
+            background-color: #e1cf9d;
+        }
+
+        h3 {
+            color: #cfb168;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        .info-box {
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+
+        .list-group-item {
+            font-family: 'Helvetica Neue';
+
+            &:hover {
+                color: #cfb168;
+            }
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    .page {
+        color: #f1f1f1;
+
+    }
+}
+
+.alert-warning {
+    color: white;
+}
+
+.search-form {
+    padding: 20px;
+
+    .form-title {
+        color: white;
+        font-size: 15px;
+        font-family: 'Poller One', sans-serif;
+    }
+
+    .search-btn {
+        background: rgb(207, 177, 104);
+        background: linear-gradient(183deg, rgba(207, 177, 104, 1) 6%, rgba(255, 255, 255, 1) 100%);
+        border: none;
+        color: #000;
+        font-family: 'Poller One', sans-serif;
+
+        &:hover {
+            background: rgb(207, 177, 104);
+            background: linear-gradient(0deg, rgba(207, 177, 104, 1) 6%, rgba(255, 255, 255, 1) 100%);
+        }
+    }
+}
+
+.showingOfQuery {
+    color: white;
+    font-size: 13px;
+    font-family: 'Poller One', sans-serif;
+    padding-left: 30px;
+}
+
+
+// Desktop view
+@media only screen and (min-width: 600px) {
+
+    h1.glow {
+        color: white;
+        font-family: 'Poller One', sans-serif;
+        text-align: center;
+        padding: 30px;
+        font-size: 4rem;
+    }
+
+    .frontpage-img {
+        width: 30%;
+    }
+
+    nav.navbar {
+
+        img.logotype {
+            width: 15%;
+            margin-bottom: 10px;
+        }
+    }
+
+    .results {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    .section {
+        margin-top: 20px;
+
+        .notfound-img {
+            width: 20%;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .single-info {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            .info-list {
+                margin: 10px;
+                width: 50%;
+                background-color: white;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    .search-form {
+        width: 40%;
+        margin: 0 auto;
+    }
+}
